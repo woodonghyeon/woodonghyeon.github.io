@@ -57,6 +57,9 @@
           {%- capture url -%}
             https://{{ entry.type }}.com/{{ site[entry.type].username }}
           {%- endcapture -%}
+        {% when 'until' %}
+          {%- capture url -%}
+            https://until.blog/@silhone1
         {% when 'email' %}
           {% assign email = site.social.email | split: '@' %}
           {%- capture url -%}
@@ -87,7 +90,11 @@
             rel="{{ link_types }}"
           {% endunless %}
         >
+        {% if entry.img %}
+          <img src="{{ entry.img }} alt="{{ entry.type }}" width="70%" height="auto">
+        {% else %}
           <i class="{{ entry.icon }}"></i>
+        {% endif %}
         </a>
       {% endif %}
     {% endfor %}
