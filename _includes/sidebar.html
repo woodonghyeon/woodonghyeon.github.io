@@ -60,6 +60,7 @@
         {% when 'until' %}
           {%- capture url -%}
             https://until.blog/@silhone1
+          {%- endcapture -%}
         {% when 'email' %}
           {% assign email = site.social.email | split: '@' %}
           {%- capture url -%}
