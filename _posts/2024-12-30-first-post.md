@@ -11,4 +11,5 @@ tags:
     .
     .
   ]
+comments: true
 ---
